@@ -122,49 +122,7 @@ var line4;
 		          canvas.add(image);
 		        });
 	  	});	  		  
-	  document.getElementById('remove-selected').onclick = function() {		  
-		    var activeObject = canvas.getActiveObject(),
-		        activeGroup = canvas.getActiveGroup();
-		    if (activeObject) {
-		      canvas.remove(activeObject);
-		      $("#text-string").val("");
-		    }
-		    else if (activeGroup) {
-		      var objectsInGroup = activeGroup.getObjects();
-		      canvas.discardActiveGroup();
-		      objectsInGroup.forEach(function(object) {
-		        canvas.remove(object);
-		      });
-		    }
-	  };
-	  document.getElementById('bring-to-front').onclick = function() {		  
-		    var activeObject = canvas.getActiveObject(),
-		        activeGroup = canvas.getActiveGroup();
-		    if (activeObject) {
-		      activeObject.bringToFront();
-		    }
-		    else if (activeGroup) {
-		      var objectsInGroup = activeGroup.getObjects();
-		      canvas.discardActiveGroup();
-		      objectsInGroup.forEach(function(object) {
-		        object.bringToFront();
-		      });
-		    }
-	  };
-	  document.getElementById('send-to-back').onclick = function() {		  
-		    var activeObject = canvas.getActiveObject(),
-		        activeGroup = canvas.getActiveGroup();
-		    if (activeObject) {
-		      activeObject.sendToBack();
-		    }
-		    else if (activeGroup) {
-		      var objectsInGroup = activeGroup.getObjects();
-		      canvas.discardActiveGroup();
-		      objectsInGroup.forEach(function(object) {
-		        object.sendToBack();
-		      });
-		    }
-	  };		  
+	  	  
 	  $("#text-bold").click(function() {		  
 		  var activeObject = canvas.getActiveObject();
 		  if (activeObject && activeObject.type === 'text') {
