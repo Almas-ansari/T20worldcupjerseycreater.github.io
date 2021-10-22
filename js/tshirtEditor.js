@@ -57,38 +57,18 @@ var line4;
 		document.getElementById('add-text').onclick = function() {
 			var text = $("#text-string").val();
 		    var textSample = new fabric.Text(text, {
-		      left: 100,
-		      top: 140,
+		      left: fabric.util.getRandomInt(0, 200),
+		      top: fabric.util.getRandomInt(0, 400),
 		      fontFamily: 'helvetica',
-			  fontSize: 90,
 		      angle: 0,
-		      fill: '#fa5a02',
+		      fill: '#000000',
 		      scaleX: 0.5,
 		      scaleY: 0.5,
-		      fontWeight: 'bolder',
+		      fontWeight: '',
 	  		  hasRotatingPoint:true
 		    });
             canvas.add(textSample);
             canvas.item(canvas.item.length-1).hasRotatingPoint = true;
-            $("#texteditor").css('display', 'block');
-            $("#imageeditor").css('display', 'block');
-
-			//NUMBER
-			var text1 = $("#text-string1").val();
-		    var textSample1 = new fabric.Text(text1, {
-		      left: 100,
-		      top: 200,
-		      fontFamily: 'helvetica',
-			  fontSize: 120,
-		      angle: 0,
-		      fill: '#fa5a02',
-		      scaleX: 0.5,
-		      scaleY: 0.5,
-		      fontWeight: 'bolder',
-	  		  hasRotatingPoint:true
-		    });		    
-            canvas.add(textSample1);	
-            canvas.item(canvas.item.length-1).hasRotatingPoint = true;    
             $("#texteditor").css('display', 'block');
             $("#imageeditor").css('display', 'block');
 	  	};
@@ -103,8 +83,8 @@ var line4;
 	  		var el = e.target;
 	  		/*temp code*/
 	  		var offset = 50;
-	        var left = 20;
-	        var top = 20;
+	        var left = fabric.util.getRandomInt(0 + offset, 200 - offset);
+	        var top = fabric.util.getRandomInt(0 + offset, 400 - offset);
 	        var angle = fabric.util.getRandomInt(-20, 40);
 	        var width = fabric.util.getRandomInt(30, 50);
 	        var opacity = (function(min, max){ return Math.random() * (max - min) + min; })(0.5, 1);
