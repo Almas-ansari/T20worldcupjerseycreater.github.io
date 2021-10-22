@@ -57,8 +57,8 @@ var line4;
 		document.getElementById('add-text').onclick = function() {
 			var text = $("#text-string").val();
 		    var textSample = new fabric.Text(text, {
-		      left: 20,
-		      top: 20,
+		      left: fabric.util.getRandomInt(0, 200),
+		      top: fabric.util.getRandomInt(0, 400),
 		      fontFamily: 'helvetica',
 		      angle: 0,
 		      fill: '#000000',
