@@ -1,199 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>TShirt Editor</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <title>TShirt Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
-    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/fabric.js"></script>
+  <!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+  <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/fabric.js"></script>
 
 
-    <!-- Le styles -->
-    <link type="text/css" rel="stylesheet" href="css/jquery.miniColors.css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	 <script type="text/javascript">
-	 </script>
-	 <style type="text/css">
-		 .footer {
-			padding: 70px 0;
-			margin-top: 70px;
-			border-top: 1px solid #E5E5E5;
-			background-color: whiteSmoke;
-			}
-	      body {
-          background-color: whiteSmoke;
-	        padding-top: 60px;
-	      }
-	      .color-preview {
-	      	border: 1px solid #CCC;
-	      	margin: 2px;
-	      	zoom: 1;
-	      	vertical-align: top;
-	      	display: inline-block;
-	      	cursor: pointer;
-	      	overflow: hidden;
-	      	width: 20px;
-	      	height: 20px;
-	      }
-	      .rotate {
-		    -webkit-transform:rotate(90deg);
-		    -moz-transform:rotate(90deg);
-		    -o-transform:rotate(90deg);
-		    /* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
-		    -ms-transform:rotate(90deg);
-		}
-		.Arial{font-family:"Arial";}
-		.Helvetica{font-family:"Helvetica";}
-		.MyriadPro{font-family:"Myriad Pro";}
-		.Delicious{font-family:"Delicious";}
-		.Verdana{font-family:"Verdana";}
-		.Georgia{font-family:"Georgia";}
-		.Courier{font-family:"Courier";}
-		.ComicSansMS{font-family:"Comic Sans MS";}
-		.Impact{font-family:"Impact";}
-		.Monaco{font-family:"Monaco";}
-		.Optima{font-family:"Optima";}
-		.HoeflerText{font-family:"Hoefler Text";}
-		.Plaster{font-family:"Plaster";}
-		.Engagement{font-family:"Engagement";}
+  <!-- Le styles -->
+  <link type="text/css" rel="stylesheet" href="css/jquery.miniColors.css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  <script type="text/javascript">
+  </script>
+  <style type="text/css">
+    .footer {
+      padding: 70px 0;
+      margin-top: 70px;
+      border-top: 1px solid #E5E5E5;
+      background-color: whiteSmoke;
+    }
 
-	 </style>
-  </head>
+    body {
+      background-color: whiteSmoke;
+      padding-top: 60px;
+    }
 
-  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+    .color-preview {
+      border: 1px solid #CCC;
+      margin: 2px;
+      zoom: 1;
+      vertical-align: top;
+      display: inline-block;
+      cursor: pointer;
+      overflow: hidden;
+      width: 20px;
+      height: 20px;
+    }
+
+    .rotate {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      /* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
+      -ms-transform: rotate(90deg);
+    }
+
+    .Arial {
+      font-family: "Arial";
+    }
+
+    .Helvetica {
+      font-family: "Helvetica";
+    }
+
+    .MyriadPro {
+      font-family: "Myriad Pro";
+    }
+
+    .Delicious {
+      font-family: "Delicious";
+    }
+
+    .Verdana {
+      font-family: "Verdana";
+    }
+
+    .Georgia {
+      font-family: "Georgia";
+    }
+
+    .Courier {
+      font-family: "Courier";
+    }
+
+    .ComicSansMS {
+      font-family: "Comic Sans MS";
+    }
+
+    .Impact {
+      font-family: "Impact";
+    }
+
+    .Monaco {
+      font-family: "Monaco";
+    }
+
+    .Optima {
+      font-family: "Optima";
+    }
+
+    .HoeflerText {
+      font-family: "Hoefler Text";
+    }
+
+    .Plaster {
+      font-family: "Plaster";
+    }
+
+    .Engagement {
+      font-family: "Engagement";
+    }
+  </style>
+</head>
+
+<body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
 
   <!-- Navbar
     ================================================== -->
-    <h3 style="color:black" direction="right" behavior="alternate"><marquee>#BleedBlue</marquee></h3>
-    <h2>Support Team India by sharing your jersey for this T20 worldcup 2021</h2>
-    <div class="container">
-		<section id="typography">
-		  <div class="page-header">
-		    <h3>Customize your jersey here!!</h3>
-		  </div>
+  <h3 style="color:black" direction="right" behavior="alternate">
+    <marquee>#BleedBlue</marquee>
+  </h3>
+  <h2>Support Team India by sharing your jersey for this T20 worldcup 2021</h2>
+  <div class="container" style="text-align:center">
+    <section id="typography">
+      <div class="page-header" style="display:inline">
+        <h3>Customize your jersey here!!</h3>
+      </div>
 
-		  <!-- Headings & Paragraph Copy -->
-		  <div class="row">
-		    <div class="span3">
+      <!-- Headings & Paragraph Copy -->
+      <div class="row">
+        <div class="span3">
 
-		    	<div class="tabbable"> <!-- Only required for left/right tabs -->
-				  <ul class="nav nav-tabs">
+          <div class="tabbable">
+            <!-- Only required for left/right tabs -->
+            <ul class="nav nav-tabs">
 
-				    <li ><a href="#tab1" data-toggle="tab">Editor</a></li>
-				  </ul>
-				  <div class="tab-content">
-            <ol>
-              <li>Enter your name and Number you want on your jersey!!</li>
-              <li>Click on arrow to make text appear on jersey</li>
-              <li>Click on download, to get your jersey</li>
-              <li>Share your jersey on social media and supoort team india</li>
-            </ol>
-            <p>PS:Dont forget to tag us!!</p>
-
-
-<!--					      	<h3>Tee Styles</h3>-->
-<!--						      <p>-->
-
-<!--						      </p>-->
+              <li><a href="#tab1" data-toggle="tab">Editor</a></li>
+            </ul>
+            <div class="tab-content">
+              <ol>
+                <li>Enter your name and Number you want on your jersey!!</li>
+                <li>Click on arrow to make text appear on jersey</li>
+                <li>Click on download, to get your jersey</li>
+                <li>Share your jersey on social media and supoort team india</li>
+              </ol>
+              <p>PS:Dont forget to tag us!!</p>
 
 
-				     </div>
-				    <div class="tab-pane" id="tab1">
-				    		<div class="input-append">
-							  <input class="span2" id="text-string" type="text" placeholder="NAME.."><button id="add-text" class="btn" title="Add text"><i class="icon-share-alt"></i></button>
-							  <hr>
-							</div>
-							<div class="input-append">
-							  <input class="span2" id="text-string1" type="text" placeholder="NUMBER..">
-							  <hr>
-							</div>
+              <!--					      	<h3>Tee Styles</h3>-->
+              <!--						      <p>-->
 
-							</div>
-
-				    	</div>
-				    </div>
-				  </div>
-				</div>
-		    </div>
-		    <div class="span6">
-		    		<div align="center" style="min-height: 32px;">
-		    			<div class="clearfix">
-							<div class="btn-group inline pull-left" id="texteditor" style="display:none">
-								<!--- Background <input type="hidden" id="text-bgcolor" class="color-picker" size="7" value="#ffffff"> --->
-							</div>
-
-						</div>
-					</div>
-				<!--	EDITOR      -->
-
-					<div id="shirtDiv" class="page" style=" position: relative; background-color: rgb(255, 255, 255);">
-						<img name="tshirtview" id="tshirtFacing" src="img/crew_front.png">
-						<div id="drawingArea" style="position: absolute;top: 40px;left: 250px;z-index: 10;width: 100px;height: 400px;">
-							<canvas id="tcanvas" width="200" height="800" class="hover" style="-webkit-user-select: none;"></canvas>
-						</div>
-					</div>
+              <!--						      </p>-->
 
 
-    <button type="button" class="btn btn-default" id="screenshot" style="
+
+              <div class="tab-pane" id="tab1">
+                <div class="input-append">
+                  <input class="span2" id="text-string" type="text" placeholder="NAME.."><button id="add-text" class="btn" title="Add text"><i class="icon-share-alt"></i></button>
+                  <hr>
+                </div>
+                <div class="input-append">
+                  <input class="span2" id="text-string1" type="text" placeholder="NUMBER..">
+                  <hr>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="span6">
+        <div align="center" style="min-height: 32px;">
+          <div class="clearfix">
+            <div class="btn-group inline pull-left" id="texteditor" style="display:none">
+              <!--- Background <input type="hidden" id="text-bgcolor" class="color-picker" size="7" value="#ffffff"> --->
+            </div>
+
+          </div>
+        </div>
+        <!--	EDITOR      -->
+
+        <div id="shirtDiv" class="page" style=" position: relative; background-color: rgb(255, 255, 255),display:inline;">
+          <img name="tshirtview" id="tshirtFacing" src="img/crew_front.png">
+          <div id="drawingArea" style="position: absolute;top: 40px;left: 250px;z-index: 10;width: 100px;height: 400px;">
+            <canvas id="tcanvas" width="200" height="800" class="hover" style="-webkit-user-select: none;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <button type="button" class="btn btn-default" id="screenshot" style="
     color: #333;
     background-color: #fff;
     border-color: #ccc;">Download your jersey!</button>
-    <br/>
-    <h4>Time to Share it on Insta, Facebook and Twitter!!!</h4>
-    <h4>Don't forget to tag us on instagram <a style="color:black" title="InstaHandle" href="https://www.instagram.com/india_t20worldcup_jersey/">@india_t20worldcup_jersey</a></h4>
+      <br />
+      <h4>Time to Share it on Insta, Facebook and Twitter!!!</h4>
+      <h4>Don't forget to tag us on instagram <a style="color:black" title="InstaHandle" href="https://www.instagram.com/india_t20worldcup_jersey/">@india_t20worldcup_jersey</a></h4>
 
-<!-- Footer ================================================== -->
-<footer class="footer">
-            <section class="container">
-                <h5>Designed by <a href="https://github.com/Almas-ansari" title="Almas Ansari">Almas Ansari</a> and <a title="Sana Eram" href="https://github.com/sanaeram5">Sana Eram</a>. Licensed under the <a target="_blank" href="https://github.com/Almas-ansari/T20worldcupjerseycreater.github.io/blob/main/LICENSE" title="MIT License">MIT License</a>.</h5>
-                <h5>⭐Star our<a href="https://github.com/Almas-ansari/T20worldcupjerseycreater.github.io"> repo</a> on Github</h5>
+      <!-- Footer ================================================== -->
+      <footer class="footer">
+        <section class="container">
+          <h5>Designed by <a href="https://github.com/Almas-ansari" title="Almas Ansari">Almas Ansari</a> and <a title="Sana Eram" href="https://github.com/sanaeram5">Sana Eram</a>. Licensed under the <a target="_blank"
+              href="https://github.com/Almas-ansari/T20worldcupjerseycreater.github.io/blob/main/LICENSE" title="MIT License">MIT License</a>.</h5>
+          <h5>⭐Star our<a href="https://github.com/Almas-ansari/T20worldcupjerseycreater.github.io"> repo</a> on Github</h5>
 
-            </section>
-        </footer>
+        </section>
+      </footer>
 
 
-<script type="text/javascript" src="js/screenshot.js"></script>
+      <script type="text/javascript" src="js/screenshot.js"></script>
 
-    <!-- Le javascript
+      <!-- Le javascript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script>
-        $(document).ready(function(){
-    $("#tshirttype").change(function(){
-     $("img[name=tshirtview]").attr("src",$(this).val());
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script>
+        $(document).ready(function() {
+          $("#tshirttype").change(function() {
+            $("img[name=tshirtview]").attr("src", $(this).val());
 
-    });
+          });
 
-    });
-    </script>
+        });
+      </script>
 
 
-    <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/tshirtEditor.js"></script>
-	<script type="text/javascript" src="js/jquery.miniColors.min.js"></script>
-    <script type="text/javascript">
+      <script src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/tshirtEditor.js"></script>
+      <script type="text/javascript" src="js/jquery.miniColors.min.js"></script>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-35639689-1']);
+        _gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35639689-1']);
-  _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+</body>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-  </body>
 </html>
