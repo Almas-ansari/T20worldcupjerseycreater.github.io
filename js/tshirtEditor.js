@@ -57,10 +57,10 @@ var line4;
 		document.getElementById('add-text').onclick = function() {
 			var text = $("#text-string").val();
 		    var textSample = new fabric.Text(text, {
-		      left: 100,
-		      top: 140,
+		      left: 120,
+		      top: 190,
 		      fontFamily: 'helvetica',
-			  fontSize: 90,
+			  fontSize: 55,
 		      angle: 0,
 		      fill: '#fa5a02',
 		      scaleX: 0.5,
@@ -72,14 +72,33 @@ var line4;
             canvas.item(canvas.item.length-1).hasRotatingPoint = true;    
             $("#texteditor").css('display', 'block');
             $("#imageeditor").css('display', 'block');
+			$(window).resize(function() {
+				if (window.matchMedia('(max-width: 320px)').matches) {
+					var text = $("#text-string").val();
+					var textSample = new fabric.Text(text, {
+					left: -80,
+					top: 30,
+					fontFamily: 'helvetica',
+					fontSize: 30,
+					angle: 0,
+					fill: '#fa5a02',
+					scaleX: 0.5,
+					scaleY: 0.5,
+					fontWeight: 'bolder',
+					hasRotatingPoint:true
+					});		    
+					canvas.add(textSample);	
+				}
+			});
+			
 
 			//NUMBER
 			var text1 = $("#text-string1").val();
 		    var textSample1 = new fabric.Text(text1, {
-		      left: 100,
-		      top: 200,
+		      left: 115,
+		      top: 270,
 		      fontFamily: 'helvetica',
-			  fontSize: 120,
+			  fontSize: 150,
 		      angle: 0,
 		      fill: '#fa5a02',
 		      scaleX: 0.5,
