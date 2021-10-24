@@ -68,6 +68,21 @@
 		.Plaster{font-family:"Plaster";}
 		.Engagement{font-family:"Engagement";}
 
+		#drawingArea{
+			position: absolute;
+			top: 40px;
+			margin-left: 250px;
+			z-index: 10;
+			width: 100px;
+			height: 400px;
+		}
+		
+		@media only screen and (max-width: 1200px){
+			#drawingArea{
+				margin-left: 105px;
+				margin-top: -83px;
+			}
+		}
 	 </style>
   </head>
 
@@ -140,7 +155,7 @@
 
 					<div id="shirtDiv" class="page" style=" position: relative; background-color: rgb(255, 255, 255);">
 						<img name="tshirtview" id="tshirtFacing" src="img/crew_front.png">
-						<div id="drawingArea" style="position: absolute;top: 40px;left: 250px;z-index: 10;width: 100px;height: 400px;">
+						<div id="drawingArea" style="">
 							<canvas id="tcanvas" width="200" height="800" class="hover" style="-webkit-user-select: none;"></canvas>
 						</div>
 					</div>
